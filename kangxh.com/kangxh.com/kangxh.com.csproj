@@ -159,6 +159,7 @@
     <Content Include="default.html" />
     <Content Include="html5\Identity\adfs.aspx" />
     <Content Include="Identity\adfs.aspx" />
+    <Content Include="Identity\claims.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
@@ -330,6 +331,13 @@
     </Compile>
     <Compile Include="Identity\adfs.aspx.designer.cs">
       <DependentUpon>adfs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Identity\claims.aspx.cs">
+      <DependentUpon>claims.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Identity\claims.aspx.designer.cs">
+      <DependentUpon>claims.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

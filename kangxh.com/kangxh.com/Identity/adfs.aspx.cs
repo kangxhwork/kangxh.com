@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 using Microsoft.Owin;
 using Owin;
 
+using System.Web.Security;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.WsFederation;
+
 namespace kangxh.com.Identity
 {
 
@@ -24,6 +29,10 @@ namespace kangxh.com.Identity
             // Send a WSFederation sign-in request.
             if (!Request.IsAuthenticated)
             {
+                HttpContext.Current.GetOwinContext().Authentication.Challenge(
+                    //new AuthenticationProperties { RedirectUri = "/" },
+                    new AuthenticationProperties { RedirectUri = "/identity/claims.aspx" },
+                    WsFederationAuthenticationDefaults.AuthenticationType);
             }
         }
     }
