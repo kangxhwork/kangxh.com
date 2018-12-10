@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace kangxh.com.html5.Identity
+namespace kangxh.com.Identity
 {
-
-
-    public partial class adfs
+    public partial class aad
     {
 
         /// <summary>

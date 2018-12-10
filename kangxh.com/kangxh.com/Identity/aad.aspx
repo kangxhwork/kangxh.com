@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="claims.aspx.cs" Inherits="kangxh.com.Identity.claims" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="aad.aspx.cs" Inherits="kangxh.com.Identity.aad" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <br />
+    
     </div>
     </form>
 </body>

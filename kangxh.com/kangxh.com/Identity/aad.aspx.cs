@@ -14,24 +14,28 @@ using System.Web.Security;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.WsFederation;
+using Microsoft.Owin.Security.OpenIdConnect;
+
+using System.Security.Claims;
+using System.Security.Principal;
+
 
 namespace kangxh.com.Identity
 {
-
-    public partial class adfs : System.Web.UI.Page
+    public partial class aad : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SignInADFS();
+            SignInAAD( sender, e);
         }
-        protected void SignInADFS()
+        protected void SignInAAD(object sender, EventArgs e)
         {
             // Send a WSFederation sign-in request.
             if (!Request.IsAuthenticated)
             {
                 HttpContext.Current.GetOwinContext().Authentication.Challenge(
-                    new AuthenticationProperties { RedirectUri = "/identity/claims.aspx" },
-                    WsFederationAuthenticationDefaults.AuthenticationType);
+                    new AuthenticationProperties { RedirectUri = "/" },
+                    OpenIdConnectAuthenticationDefaults.AuthenticationType);
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adfs.aspx.cs" Inherits="kangxh.com.html5.Identity.adfs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignOut.aspx.cs" Inherits="kangxh.com.Identity.SignOut" %>
 
 <!DOCTYPE html>
 

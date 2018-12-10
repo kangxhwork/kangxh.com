@@ -73,20 +73,28 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.0.17.0\lib\net45\Microsoft.Diagnostics.Instrumentation.Extensions.Intercept.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.2.1\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.5.3.0\lib\net451\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.5.2.1\lib\net451\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.5.3.0\lib\net451\Microsoft.IdentityModel.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.5.3.0\lib\net451\Microsoft.IdentityModel.Protocols.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.5.3.0\lib\net451\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Protocols.WsFederation, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Protocols.WsFederation.5.2.1\lib\net451\Microsoft.IdentityModel.Protocols.WsFederation.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.2.1\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.3.0\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Tokens.Saml, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -117,6 +125,10 @@
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Owin.Security.OpenIdConnect, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OpenIdConnect.4.0.0\lib\net451\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Owin.Security.WsFederation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Owin.Security.WsFederation.4.0.0\lib\net451\Microsoft.Owin.Security.WsFederation.dll</HintPath>
       <Private>True</Private>
@@ -130,8 +142,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.2.1\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.3.0\lib\net451\System.IdentityModel.Tokens.Jwt.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -157,11 +169,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.html" />
-    <Content Include="html5\Identity\adfs.aspx" />
+    <Content Include="html5\application.html" />
+    <Content Include="html5\template\about.html" />
+    <Content Include="html5\template\contact.html" />
+    <Content Include="html5\template\index.html" />
+    <Content Include="html5\template\pricing.html" />
+    <Content Include="html5\template\services.html" />
+    <Content Include="html5\template\work.html" />
+    <Content Include="Identity\aad.aspx" />
     <Content Include="Identity\adfs.aspx" />
     <Content Include="Identity\claims.aspx" />
+    <Content Include="Identity\SignOut.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config" />
+    <Content Include="resource\azureCAT.jpg" />
+    <Content Include="resource\azureCAT.png" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="html5\.DS_Store" />
     <Content Include="html5\css\.DS_Store" />
@@ -263,8 +285,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="html5\about.html" />
-    <Content Include="html5\contact.html" />
+    <Content Include="html5\iaas.html" />
+    <Content Include="html5\iot.html" />
     <Content Include="html5\css\animate.css" />
     <Content Include="html5\css\bootstrap.css" />
     <Content Include="html5\css\flexslider.css" />
@@ -308,22 +330,23 @@
     <Content Include="html5\js\modernizr-2.6.2.min.js" />
     <Content Include="html5\js\owl.carousel.min.js" />
     <Content Include="html5\js\respond.min.js" />
-    <Content Include="html5\pricing.html" />
-    <Content Include="html5\README.txt" />
+    <Content Include="html5\identity.html" />
     <Content Include="html5\sass\bootstrap\index.html" />
     <Content Include="html5\sass\bootstrap\mixins\index.html" />
     <Content Include="html5\sass\index.html" />
-    <Content Include="html5\services.html" />
-    <Content Include="html5\work.html" />
-    <Content Include="Web.config" />
+    <Content Include="html5\container.html" />
+    <Content Include="html5\microservice.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="html5\Identity\adfs.aspx.cs">
-      <DependentUpon>adfs.aspx</DependentUpon>
+    <Compile Include="Identity\aad.aspx.cs">
+      <DependentUpon>aad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="html5\Identity\adfs.aspx.designer.cs">
-      <DependentUpon>adfs.aspx</DependentUpon>
+    <Compile Include="Identity\aad.aspx.designer.cs">
+      <DependentUpon>aad.aspx</DependentUpon>
     </Compile>
     <Compile Include="Identity\adfs.aspx.cs">
       <DependentUpon>adfs.aspx</DependentUpon>
@@ -339,12 +362,20 @@
     <Compile Include="Identity\claims.aspx.designer.cs">
       <DependentUpon>claims.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Identity\SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Identity\SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
