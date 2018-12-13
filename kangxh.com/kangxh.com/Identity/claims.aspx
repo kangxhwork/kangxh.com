@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <br />
+        <p><a href="/identity/SignOut.aspx">click to sign out</a></p>
     </div>
     </form>
 </body>

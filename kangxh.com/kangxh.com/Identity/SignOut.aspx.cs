@@ -16,27 +16,21 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.WsFederation;
 using Microsoft.Owin.Security.OpenIdConnect;
 
-using System.Security.Claims;
-using System.Security.Principal;
-
 namespace kangxh.com.Identity
 {
     public partial class SignOut : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, LoginCancelEventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            Signout(sender, e);
+            Signout();
         }
 
-        protected void Signout(object sender, LoginCancelEventArgs e)
+        protected void Signout()
         {
-            // Redirect to ~/Account/SignOut after signing out.
-            string callbackUrl = Request.Url.GetLeftPart(UriPartial.Authority) + Response.ApplyAppPathModifier("~/Account/SignOut");
 
             HttpContext.Current.GetOwinContext().Authentication.SignOut(
-                new AuthenticationProperties { RedirectUri = callbackUrl },
-                OpenIdConnectAuthenticationDefaults.AuthenticationType,
-                CookieAuthenticationDefaults.AuthenticationType);
+                new AuthenticationProperties { RedirectUri = "http://www.kangxh.com/" },
+                OpenIdConnectAuthenticationDefaults.AuthenticationType, CookieAuthenticationDefaults.AuthenticationType);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace kangxh.com.Identity
             if (!Request.IsAuthenticated)
             {
                 HttpContext.Current.GetOwinContext().Authentication.Challenge(
-                    new AuthenticationProperties { RedirectUri = "/" },
+                    new AuthenticationProperties { RedirectUri = "/identity/claims.aspx" },
                     OpenIdConnectAuthenticationDefaults.AuthenticationType);
             }
         }
