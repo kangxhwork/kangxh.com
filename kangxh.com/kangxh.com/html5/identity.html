@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--#include file="header.html"-->
+<!--your content
+
+<!--#include file="footer.html"-->
+
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
@@ -87,6 +92,7 @@
 					<div class="col-md-3 animate-box">
 						<div class="price-box">
 							<h2 class="pricing-plan">ADFS</h2>
+                            <p> Sing to fs.kangxh.com using OnPrem AD identity, ADFS server need to be alive </p>
 							<a href="/Identity/adfs.aspx" class="btn btn-select-plan btn-sm">Sing In</a>
 						</div>
 					</div>
@@ -94,6 +100,7 @@
 					<div class="col-md-3 animate-box">
 						<div class="price-box">
 							<h2 class="pricing-plan">Azure AD</h2>
+                            <p> kangxh.com sync AzureAD OU to AAD, users in that OU can sign in without OnPrem env running </p>
 							<a href="/Identity/aad.aspx" class="btn btn-select-plan btn-sm">Sing In</a>
 						</div>
 					</div>
@@ -113,6 +120,13 @@
                         </div>
                     </div>
 
+                    <div class="col-md-3 animate-box">
+                        <div class="price-box">
+                            <h2 class="pricing-plan">WebApp ClientID</h2>
+                            <p> This WebApp has been registered in AAD and grant previledge to ready secret in KeyVault </p>
+                            <a href="/Identity/AppClientID.aspx" class="btn btn-select-plan btn-sm">Read Secret</a>
+                        </div>
+                    </div>
 
 				</div>
 			</div>
