@@ -10,6 +10,7 @@ using System.Web.Configuration;
 using Microsoft.Azure.KeyVault;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 
+//https://docs.microsoft.com/en-us/azure/key-vault/key-vault-use-from-web-application
 
 namespace kangxh.com.Identity
 {
@@ -19,27 +20,10 @@ namespace kangxh.com.Identity
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            
-            Response.Write(WebConfigurationManager.AppSettings["ClientID"]);
-            Response.Write("</br>");
-            Response.Write(WebConfigurationManager.AppSettings["ClientSecret"]);
-            Response.Write("</br>");
-            Response.Write(WebConfigurationManager.AppSettings["SecretUri"]);
-            Response.Write("</br>");
-
-            Task.WaitAll(ReadSecret());
-            Response.Write (EncryptSecret);
-        }
-
-        protected static async Task<string> ReadSecret()
-        {
             var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(GetToken));
-            var kvSecret = await kvClient.GetSecretAsync(WebConfigurationManager.AppSettings["SecretUri"]);
+            var secret = Task.Run(async () => await kvClient.GetSecretAsync(WebConfigurationManager.AppSettings["SecretUri"])).Result;
+            Response.Write(secret.Value);
 
-            EncryptSecret = kvSecret.Value;
-
-            return EncryptSecret;
         }
 
         public static async Task<string> GetToken(string authority, string resource, string scope)
