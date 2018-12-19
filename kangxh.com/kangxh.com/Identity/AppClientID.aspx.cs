@@ -22,7 +22,10 @@ namespace kangxh.com.Identity
         {
             var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(GetToken));
             var secret = Task.Run(async () => await kvClient.GetSecretAsync(WebConfigurationManager.AppSettings["SecretUri"])).Result;
-            Response.Write(secret.Value);
+
+            Response.Write("Secret ID : " + WebConfigurationManager.AppSettings["SecretUri"] + "</br>");
+
+            Response.Write("Secret Value : " + secret.Value);
 
         }
 
