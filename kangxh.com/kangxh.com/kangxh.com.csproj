@@ -206,7 +206,12 @@
     <Content Include="default.html" />
     <Content Include="html5\application.html" />
     <Content Include="html5\contact.html" />
-    <Content Include="IaaS\Blob.aspx" />
+    <Content Include="html5\favicon.ico" />
+    <Content Include="IaaS\azure-storage.blob.js" />
+    <Content Include="IaaS\azure-storage.file.js" />
+    <Content Include="IaaS\azure-storage.queue.js" />
+    <Content Include="IaaS\azure-storage.table.js" />
+    <Content Include="IaaS\webcam.aspx" />
     <Content Include="html5\images\dcx.jpg" />
     <Content Include="html5\images\OSS.png" />
     <Content Include="html5\template\about.html" />
@@ -217,6 +222,7 @@
     <Content Include="html5\template\services.html" />
     <Content Include="html5\template\UnderC.html" />
     <Content Include="html5\template\work.html" />
+    <Content Include="IaaS\webcam.js" />
     <Content Include="Identity\aad.aspx" />
     <Content Include="Identity\adfs.aspx" />
     <Content Include="Identity\AppClientID.aspx" />
@@ -383,12 +389,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IaaS\Blob.aspx.cs">
-      <DependentUpon>Blob.aspx</DependentUpon>
+    <Compile Include="IaaS\webcam.aspx.cs">
+      <DependentUpon>webcam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IaaS\Blob.aspx.designer.cs">
-      <DependentUpon>Blob.aspx</DependentUpon>
+    <Compile Include="IaaS\webcam.aspx.designer.cs">
+      <DependentUpon>webcam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Identity\aad.aspx.cs">
       <DependentUpon>aad.aspx</DependentUpon>

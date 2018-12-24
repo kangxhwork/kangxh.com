@@ -10,43 +10,43 @@
 namespace kangxh.com.html5.IaaS {
     
     
-    public partial class Blob {
+    public partial class webcam {
         
         /// <summary>
-        /// form1 control.
+        /// blobInfoForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm blobInfoForm;
         
         /// <summary>
-        /// Label1 control.
+        /// blobAccountLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label blobAccountLabel;
         
         /// <summary>
-        /// blobContainerEntry control.
+        /// blobAccountTextbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox blobContainerEntry;
+        protected global::System.Web.UI.WebControls.TextBox blobAccountTextbox;
         
         /// <summary>
-        /// Label2 control.
+        /// sasTokenLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label sasTokenLabel;
         
         /// <summary>
         /// sasTokenTextBox control.

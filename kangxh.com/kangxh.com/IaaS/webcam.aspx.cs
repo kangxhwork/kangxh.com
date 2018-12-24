@@ -17,10 +17,9 @@ using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace kangxh.com.html5.IaaS
 {
-    public partial class Blob : System.Web.UI.Page
+    public partial class webcam : System.Web.UI.Page
     {
 
-        
         protected void Page_Load(object sender, EventArgs e)
         {
             string clientIP = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
@@ -40,17 +39,18 @@ namespace kangxh.com.html5.IaaS
             // Create a new access policy for the account.
             SharedAccessAccountPolicy policy = new SharedAccessAccountPolicy()
             {
-                Permissions = SharedAccessAccountPermissions.Read | SharedAccessAccountPermissions.Write | SharedAccessAccountPermissions.List,
-                Services = SharedAccessAccountServices.Blob | SharedAccessAccountServices.File,
-                ResourceTypes = SharedAccessAccountResourceTypes.Service,
+                Permissions = SharedAccessAccountPermissions.Read | SharedAccessAccountPermissions.Write | SharedAccessAccountPermissions.List | SharedAccessAccountPermissions.Create | SharedAccessAccountPermissions.Delete,
+                Services = SharedAccessAccountServices.Blob,
+                ResourceTypes = SharedAccessAccountResourceTypes.Service | SharedAccessAccountResourceTypes.Object | SharedAccessAccountResourceTypes.Container ,
                 SharedAccessExpiryTime = DateTime.UtcNow.AddHours(1),
                 Protocols = SharedAccessProtocol.HttpsOnly,
-                IPAddressOrRange = clientIPRange
+                IPAddressOrRange = clientIPRange,
             };
 
             // Return the SAS token and container Uri. Javascript will use these value to upload image. 
             string sasToken = storageAccount.GetSharedAccessSignature(policy);
-            blobContainerEntry.Text = blobClient.StorageUri.PrimaryUri + "/webcam";
+
+            blobAccountTextbox.Text = blobClient.StorageUri.PrimaryUri.ToString();
             sasTokenTextBox.Text = sasToken;
         }
     }
