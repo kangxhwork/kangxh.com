@@ -7,8 +7,10 @@
 <div id="screenshot" style="text-align:center;">
     <video class="videostream" autoplay></video>
     <img id="screenshot-img">
-    <p><button class="capture-button">Capture video</button>
-    <p><button id="screenshot-button" disabled>Take screenshot</button></p>
+    <br />
+    <button class="capture-button">Start Camera</button>
+    <button id="screenshot-button" disabled>Take Screenshot</button>
+    <button id="saveBlob-button" disabled>Save Image to Blob</button>
 </div>
 
 <script>
@@ -54,9 +56,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Label ID="Label1" runat="server" Text="Storage Account Uri"></asp:Label>
     <div>
     
+        <asp:TextBox ID="blobContainerEntry" runat="server" Height="25px" Width="1137px"></asp:TextBox>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Storage Account SAS Token"></asp:Label>
+        <br />
+        <asp:TextBox ID="sasTokenTextBox" runat="server" Height="25px" Width="1137px"></asp:TextBox>
+    
     </div>
+        <p>
+        </p>
     </form>
 </body>
 </html>
