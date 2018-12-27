@@ -207,6 +207,7 @@
     <Content Include="html5\application.html" />
     <Content Include="html5\contact.html" />
     <Content Include="html5\favicon.ico" />
+    <Content Include="html5\container.html" />
     <Content Include="IaaS\azure-storage.blob.js" />
     <Content Include="IaaS\azure-storage.file.js" />
     <Content Include="IaaS\azure-storage.queue.js" />
@@ -382,7 +383,6 @@
     <Content Include="html5\sass\bootstrap\index.html" />
     <Content Include="html5\sass\bootstrap\mixins\index.html" />
     <Content Include="html5\sass\index.html" />
-    <Content Include="html5\container.html" />
     <Content Include="html5\microservice.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
