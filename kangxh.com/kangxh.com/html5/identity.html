@@ -6,7 +6,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Authentication</title>
+	<title>Identity</title>
 
 
   	<!-- Facebook and Twitter integration -->
@@ -62,10 +62,11 @@
 	<div id="fh5co-pricing-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+				<div class="col-md-3 col-md-offset-3 text-center fh5co-heading animate-box">
 					<h2>Authentications</h2>
                 </div>
 			</div>
+
 			<div class="row">
 				<div class="pricing">
 					<div class="col-md-3 animate-box">
@@ -76,13 +77,26 @@
 						</div>
 					</div>
 
-					<div class="col-md-3 animate-box">
-						<div class="price-box">
-							<h2 class="pricing-plan">Azure AD</h2>
+                    <div class="col-md-3 animate-box">
+                        <div class="price-box">
+                            <h2 class="pricing-plan">ADFS</h2>
+                            <p> Sing to fs.kangxh.com using OnPrem AD identity, ADFS server need to be alive </p>
+                            <a href="/Identity/adfs.aspx" class="btn btn-select-plan btn-sm">Sing In</a>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+
+            <div class="row">
+                <div class="pricing">
+                    <div class="col-md-3 animate-box">
+                        <div class="price-box">
+                            <h2 class="pricing-plan">Azure AD</h2>
                             <p> kangxh.com sync AzureAD OU to AAD, users in that OU can sign in without OnPrem env running </p>
-							<a href="/Identity/aad.aspx" class="btn btn-select-plan btn-sm">Sing In</a>
-						</div>
-					</div>
+                            <a href="/Identity/aad.aspx" class="btn btn-select-plan btn-sm">Sing In</a>
+                        </div>
+                    </div>
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
@@ -92,7 +106,6 @@
                         </div>
                     </div>
 
-
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
                             <h2 class="pricing-plan">Azure B2C</h2>
@@ -101,6 +114,11 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="pricing">
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
                             <h2 class="pricing-plan">WebApp ClientID</h2>
@@ -108,9 +126,15 @@
                             <a href="/Identity/AppClientID.aspx" class="btn btn-select-plan btn-sm">Read Secret</a>
                         </div>
                     </div>
-
-				</div>
-			</div>
+                    <div class="col-md-3 animate-box">
+                        <div class="price-box">
+                            <h2 class="pricing-plan">Azure B2C</h2>
+                            <p> Build Customer facing App and allow your customer keeping social identity, like G-Mail, FaceBook</p>
+                            <a href="/Identity/aad.aspx" class="btn btn-select-plan btn-sm">Sing In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
 
