@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kangxh.com", "kangxh.com\ka
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvtGenerator", "EvtGenerator\EvtGenerator.csproj", "{71F5A5E1-D1A8-42B4-9C25-1CAE3DD641BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sites", "..\Sites\Sites.csproj", "{C94E4F17-9225-4D51-B726-6172B8C29EDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\..\..\..\..\..\temp\TestApp\TestApp.csproj", "{E2A71BE9-13C1-4AF7-AA96-EC79E2F19DF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,19 @@ Global
 		{71F5A5E1-D1A8-42B4-9C25-1CAE3DD641BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71F5A5E1-D1A8-42B4-9C25-1CAE3DD641BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71F5A5E1-D1A8-42B4-9C25-1CAE3DD641BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C94E4F17-9225-4D51-B726-6172B8C29EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C94E4F17-9225-4D51-B726-6172B8C29EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C94E4F17-9225-4D51-B726-6172B8C29EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C94E4F17-9225-4D51-B726-6172B8C29EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A71BE9-13C1-4AF7-AA96-EC79E2F19DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A71BE9-13C1-4AF7-AA96-EC79E2F19DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A71BE9-13C1-4AF7-AA96-EC79E2F19DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A71BE9-13C1-4AF7-AA96-EC79E2F19DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {362F13F8-6619-4E17-BACA-EF523D0CE54A}
 	EndGlobalSection
 EndGlobal

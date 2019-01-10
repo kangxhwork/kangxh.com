@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
-                    <h2>Container Apps running on AKS or K8s</h2>
+                    <h2>Apps running on AKS</h2>
                 </div>
             </div>
             <div class="row">
@@ -71,16 +71,25 @@
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">AKS Vote</h2>
-                            <p> Sample azure vote app running on one node aks cluster. nginx front + redis backend</p>
-                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">DEMO</a>
+                            <h2 class="pricing-plan">Azure Vote App</h2>
+                            <p> Sample azure vote app running on aks cluster. nginx front POD + redis backend POD. Internal loadlalancer Service Port</p>
+                            <a href="http://www.kangxh.com:81" class="btn btn-select-plan btn-sm">Start Vote</a>
                         </div>
                     </div>
+
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">AKS Vote</h2>
-                            <p> Sample azure vote app running on one node aks cluster. nginx front + redis backend</p>
-                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">aks Vote</a>
+                            <h2 class="pricing-plan">ELK Stack</h2>
+                            <p> ELK Stack running on aks cluster. Elasticsearch - Logstash - Kibana within one POD. Internal loadlalancer Service Port</p>
+                            <a href="http://www.kangxh.com:82" class="btn btn-select-plan btn-sm">View Kibana</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 animate-box">
+                        <div class="price-box">
+                            <h2 class="pricing-plan">AKS Topology</h2>
+                            <p> VOTE and ELK running in one AKS cluster, instead of AKS ingress controller, use Application Gateway to route the trafic </p>
+                            <a href="../container/akstoplogy.html" class="btn btn-select-plan btn-sm">AKS Topology</a>
                         </div>
                     </div>
 
@@ -88,20 +97,37 @@
             </div>
 
             <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+                    <h2>Apps running on K8S Azure VM</h2>
+                </div>
+            </div>
+
+            <div class="row">
                 <div class="pricing">
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">AKS Vote</h2>
-                            <p> Sample azure vote app running on one node aks cluster. nginx front + redis backend</p>
-                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">aks Vote</a>
+                            <h2 class="pricing-plan">Manage K8s Cluster</h2>
+                            <p> VMs (1 master + 2 worker) are shutdown all the time, start these VMs to access Vote App on K8s. Automation by trigger Webhook</p>
+                            <p> The triggered runbook gets Params (VM name, Resource Group name, Control Code), so it can be reused by other control plane</p>
+                            <a href="/container/managek8scluster.aspx" class="btn btn-select-plan btn-sm"> Manage K8S Cluster</a>
                         </div>
                     </div>
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">AKS Vote</h2>
-                            <p> Sample azure vote app running on one node aks cluster. nginx front + redis backend</p>
-                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">aks Vote</a>
+                            <h2 class="pricing-plan">Manage K8s Cluster</h2>
+                            <p> To save K8S VM cost, the cluster will be shutdown after 10min automatically. Instead of trigger Webhook runbook, Use Azure Functions </p>
+                            <p> For demo purpose, this FUNCTION uses REST API to control (shutdown) the VM resource. REST API can be a universal way for Azure management  </p>
+                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm"> Stop K8S Cluster</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 animate-box">
+                        <div class="price-box">
+                            <h2 class="pricing-plan">Vote on K8S</h2>
+                            <p> K8S cluster deployed on Azure IaaS VMs, 1 master + 2 workers. Same image of AKS Vote app deployed in different environment. So called portability</p>
+                            <p> Cluster is running behind Application Gateway for protection, it is controlled by Automation Runbooks and FUNCTIONS for cost saving</p>
+                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">K8S Topology</a>
                         </div>
                     </div>
 
