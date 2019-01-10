@@ -208,6 +208,7 @@
     <Content Include="container\aks.jpg" />
     <Content Include="container\akstoplogy.html" />
     <Content Include="container\managek8scluster.aspx" />
+    <Content Include="container\managek8sclusterFunc.aspx" />
     <Content Include="default.html" />
     <Content Include="html5\images\2018-dcx.jpg" />
     <Content Include="html5\images\2019-aks.jpg" />
@@ -404,6 +405,13 @@
     </Compile>
     <Compile Include="container\managek8scluster.aspx.designer.cs">
       <DependentUpon>managek8scluster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="container\managek8sclusterFunc.aspx.cs">
+      <DependentUpon>managek8sclusterFunc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="container\managek8sclusterFunc.aspx.designer.cs">
+      <DependentUpon>managek8sclusterFunc.aspx</DependentUpon>
     </Compile>
     <Compile Include="IaaS\webcam.aspx.cs">
       <DependentUpon>webcam.aspx</DependentUpon>

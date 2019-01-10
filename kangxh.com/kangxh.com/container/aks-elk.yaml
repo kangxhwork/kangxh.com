@@ -185,11 +185,11 @@ data:
   azureeventhubs.cfg: |
     input {
       azure_event_hubs {
-        event_hub_connections => ["Endpoint=sb://kangxhevthubsea.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=kJhvWFVnHvqxF21mhUPrMlyKmcvY6mAJWWvEbOhHFBg=;EntityPath=akselk"]
+        event_hub_connections => ["Endpoint=sb://kangxhevthubsea.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=;EntityPath=akselk"] # Removed key for security 
         threads => 2
         decorate_events => true
         consumer_group => "$Default"
-        storage_connection => "DefaultEndpointsProtocol=https;AccountName=kangxhsaaks;AccountKey=Z8rIOC3A5YQ0aHJ2XhiYPIP69lSJURZwuYtI8KL4vekA/3X2+gFa70IV7y6nOJejhGTwnDVqXrytxpxBNid4ZQ==;EndpointSuffix=core.windows.net"
+        storage_connection => "DefaultEndpointsProtocol=https;AccountName=kangxhsaaks;AccountKey=;EndpointSuffix=core.windows.net" # Removed key for security 
         storage_container => "akselk"
         }
     }
