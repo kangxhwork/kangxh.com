@@ -107,8 +107,7 @@
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
                             <h2 class="pricing-plan">Manage K8s Cluster</h2>
-                            <p> VMs (1 master + 2 worker) are shutdown all the time, start these VMs to access Vote App on K8s. Automation by trigger Webhook</p>
-                            <p> The triggered runbook gets Params (VM name, Resource Group name, Control Code), so it can be reused by other control plane</p>
+                            <p> VMs (1 master + 2 worker) are shutdown all the time. Trigger webhooker to start the VM and turn them off after 5min using Azure Fucntion</p>
                             <a href="/container/managek8scluster.aspx" class="btn btn-select-plan btn-sm"> Manage K8S Cluster</a>
                         </div>
                     </div>
@@ -116,17 +115,15 @@
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
                             <h2 class="pricing-plan">Manage K8s Cluster</h2>
-                            <p> To save K8S VM cost, the cluster will be shutdown after 10min automatically. Instead of trigger Webhook runbook, Use Azure Functions </p>
-                            <p> For demo purpose, this FUNCTION uses REST API to control (shutdown) the VM resource. REST API can be a universal way for Azure management  </p>
-                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm"> Stop K8S Cluster</a>
+                            <p> Sample vote app running on K8S cluster without installing ACS Engine to make it clean. Use Application Gateway to forward external request</p>
+                            <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">Access K8S Vote </a>
                         </div>
                     </div>
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
                             <h2 class="pricing-plan">Vote on K8S</h2>
-                            <p> K8S cluster deployed on Azure IaaS VMs, 1 master + 2 workers. Same image of AKS Vote app deployed in different environment. So called portability</p>
-                            <p> Cluster is running behind Application Gateway for protection, it is controlled by Automation Runbooks and FUNCTIONS for cost saving</p>
+                            <p> K8S cluster deployed on Azure IaaS VMs, 1 master + 2 workers. Same image of AKS Vote app deployed in different env. So called portability</p>
                             <a href="http://aksvote.kangxh.com" class="btn btn-select-plan btn-sm">K8S Topology</a>
                         </div>
                     </div>
