@@ -206,7 +206,10 @@
   <ItemGroup>
     <Content Include="container\aks-cmd.jpg" />
     <Content Include="container\aks.jpg" />
+    <Content Include="container\k8stoplogy.html" />
     <Content Include="container\akstoplogy.html" />
+    <Content Include="container\k8s-cmd.jpg" />
+    <Content Include="container\k8s.jpg" />
     <Content Include="container\managek8scluster.aspx" />
     <Content Include="default.html" />
     <Content Include="html5\images\2018-dcx.jpg" />
@@ -215,6 +218,8 @@
     <Content Include="html5\contact.html" />
     <Content Include="html5\favicon.ico" />
     <Content Include="html5\container.html" />
+    <Content Include="html5\app.html" />
+    <Content Include="html5\template\container.html" />
     <Content Include="IaaS\azure-storage.blob.js" />
     <Content Include="IaaS\azure-storage.file.js" />
     <Content Include="IaaS\azure-storage.queue.js" />
@@ -335,6 +340,7 @@
     <Content Include="container\aks-elk.yaml" />
     <Content Include="container\aks.vsdm" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="container\k8s.vsdm" />
     <None Include="Properties\PublishProfiles\kangxhwebsea - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

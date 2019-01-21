@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Container</title>
+    <title>Applications</title>
 
 
     <!-- Facebook and Twitter integration -->
@@ -59,11 +59,12 @@
             </div>
         </div>
     </header>
+
     <div id="fh5co-pricing-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
-                    <h2>Apps running on AKS</h2>
+                    <h2>Serverless Computing - Azure Functions</h2>
                 </div>
             </div>
             <div class="row">
@@ -71,75 +72,38 @@
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">Azure Vote App</h2>
-                            <p> Sample azure vote app running on aks cluster. nginx front POD + redis backend POD. Internal loadlalancer Service Port</p>
-                            <a href="http://www.kangxh.com:81" class="btn btn-select-plan btn-sm">Start Vote</a>
+                            <h2 class="pricing-plan">HTTP Trigger</h2>
+                            <p> Web App POST API to Functions URL. Cloud App controls underlying infra </p>
+                            <a href="https://github.com/Azure/Azure-Functions" class="btn btn-select-plan btn-sm">View Sample</a>
                         </div>
                     </div>
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">ELK Stack</h2>
-                            <p> ELK Stack running on aks cluster. Elasticsearch - Logstash - Kibana within one POD. Internal loadlalancer Service Port</p>
-                            <a href="http://www.kangxh.com:82" class="btn btn-select-plan btn-sm">View Kibana</a>
+                            <h2 class="pricing-plan">Storage Trigger</h2>
+                            <p> Fucntion used in sites.kangxh.com to handle image upload process </p>
+                            <a href="http://sites.kangxh.com/2019us/uploadimg.html" class="btn btn-select-plan btn-sm">View Sample</a>
                         </div>
                     </div>
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">AKS Topology</h2>
-                            <p> VOTE and ELK running in one AKS cluster, instead of AKS ingress controller, use Application Gateway to route the trafic </p>
-                            <a href="../container/akstoplogy.html" class="btn btn-select-plan btn-sm">AKS Topology</a>
+                            <h2 class="pricing-plan">Function Repository</h2>
+                            <p> Everything about Functions on Github, managed by Function PG </p>
+                            <a href="https://github.com/Azure/Azure-Functions" class="btn btn-select-plan btn-sm">View Github</a>
                         </div>
                     </div>
 
                     <div class="col-md-3 animate-box">
                         <div class="price-box">
-                            <h2 class="pricing-plan">AKS China</h2>
-                            <p> AKS on China is almost the same as global.  Be aware of China Great Firewall </p>
-                            <p> Comments from AKS PG</p>
-                            <a href="https://github.com/Azure/container-service-for-azure-china/tree/master/aks" class="btn btn-select-plan btn-sm">AKS in China</a>
+                            <h2 class="pricing-plan">Function Repository</h2>
+                            <p> Everything about Functions on Github, managed by Function PG </p>
+                            <a href="https://github.com/Azure/Azure-Functions" class="btn btn-select-plan btn-sm">View Github</a>
                         </div>
                     </div>
 
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
-                    <h2>Apps running on K8S Azure VM</h2>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="pricing">
-                    <div class="col-md-3 animate-box">
-                        <div class="price-box">
-                            <h2 class="pricing-plan">Manage K8s Cluster</h2>
-                            <p> VMs (1 master + 2 worker) are shutdown all the time. Trigger webhooker to start the VM and turn them off after 5min using Azure Fucntion</p>
-                            <a href="/container/managek8scluster.aspx" class="btn btn-select-plan btn-sm"> Manage K8S Cluster</a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 animate-box">
-                        <div class="price-box">
-                            <h2 class="pricing-plan">Access K8s App</h2>
-                            <p> Sample vote app running on K8S cluster without installing ACS Engine to make it clean. Use Application Gateway to forward external request</p>
-                            <a href="http://www.kangxh.com:83" class="btn btn-select-plan btn-sm">Access K8S Vote </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 animate-box">
-                        <div class="price-box">
-                            <h2 class="pricing-plan">Vote on K8S</h2>
-                            <p> K8S cluster deployed on Azure IaaS VMs, 1 master + 2 workers. Same image of AKS Vote app deployed in different env. So called portability</p>
-                            <a href="../container/k8stoplogy.html" class="btn btn-select-plan btn-sm">K8S Topology</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
     </div>
 

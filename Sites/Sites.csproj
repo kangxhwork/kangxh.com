@@ -44,6 +44,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\kangxh.com\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\kangxh.com\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +60,12 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\kangxh.com\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\kangxh.com\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -67,9 +80,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="2019US\blog.html" />
-    <Content Include="2019US\car.html" />
-    <Content Include="2019US\contact.html" />
+    <Content Include="2019US\imgFunc.js" />
+    <Content Include="2019US\photo.html" />
+    <Content Include="2019US\story.html" />
     <Content Include="2019US\css\animate.css" />
     <Content Include="2019US\css\bootstrap-datepicker.min.css" />
     <Content Include="2019US\css\bootstrap.css" />
@@ -79,7 +92,7 @@
     <Content Include="2019US\css\magnific-popup.css" />
     <Content Include="2019US\css\style.css" />
     <Content Include="2019US\css\superfish.css" />
-    <Content Include="2019US\flight.html" />
+    <Content Include="2019US\favicon.ico" />
     <Content Include="2019US\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="2019US\fonts\icomoon\icomoon.svg" />
     <Content Include="2019US\fonts\icomoon\icomoon\demo-files\demo.css" />
@@ -88,7 +101,7 @@
     <Content Include="2019US\fonts\icomoon\icomoon\fonts\icomoon.svg" />
     <Content Include="2019US\fonts\icomoon\icomoon\Read Me.txt" />
     <Content Include="2019US\fonts\icomoon\icomoon\style.css" />
-    <Content Include="2019US\hotel.html" />
+    <Content Include="2019US\images\AntelopeValley1.jpg" />
     <Content Include="2019US\images\car-1.jpg" />
     <Content Include="2019US\images\car-2.jpg" />
     <Content Include="2019US\images\car-3.jpg" />
@@ -100,17 +113,19 @@
     <Content Include="2019US\images\cover_bg_3.jpg" />
     <Content Include="2019US\images\cover_bg_4.jpg" />
     <Content Include="2019US\images\cover_bg_5.jpg" />
+    <Content Include="2019US\images\GrandCanyonNationalPark1.jpg" />
+    <Content Include="2019US\images\HooverDam1.jpg" />
+    <Content Include="2019US\images\Img_bg_1.jpg" />
+    <Content Include="2019US\images\KingsCanyon1.jpeg" />
+    <Content Include="2019US\images\lasvegas1.jpg" />
     <Content Include="2019US\images\loc.png" />
-    <Content Include="2019US\images\place-1.jpg" />
-    <Content Include="2019US\images\place-10.jpg" />
-    <Content Include="2019US\images\place-2.jpg" />
-    <Content Include="2019US\images\place-3.jpg" />
-    <Content Include="2019US\images\place-4.jpg" />
-    <Content Include="2019US\images\place-5.jpg" />
-    <Content Include="2019US\images\place-6.jpg" />
-    <Content Include="2019US\images\place-7.jpg" />
-    <Content Include="2019US\images\place-8.jpg" />
-    <Content Include="2019US\images\place-9.jpg" />
+    <Content Include="2019US\images\losangeles1.jpg" />
+    <Content Include="2019US\images\map.jpg" />
+    <Content Include="2019US\images\MonumentValley1.jpg" />
+    <Content Include="2019US\images\SaltLakeCity1.jpg" />
+    <Content Include="2019US\images\yellowstone1.jpg" />
+    <Content Include="2019US\images\Yosemite1.jpg" />
+    <Content Include="2019US\images\YosemiteNationalPark1.jpg" />
     <Content Include="2019US\index.html" />
     <Content Include="2019US\js\bootstrap-datepicker.min.js" />
     <Content Include="2019US\js\bootstrap.min.js" />
@@ -130,10 +145,32 @@
     <Content Include="2019US\js\sticky.js" />
     <Content Include="2019US\js\superfish.js" />
     <Content Include="2019US\README.txt" />
-    <Content Include="2019US\vacation.html" />
+    <Content Include="2019US\fileUploader.ashx" />
+    <None Include="Scripts\jquery-1.6.1-vsdoc.js" />
+    <Content Include="Content\fancybox\blank.gif" />
+    <Content Include="Content\fancybox\fancybox_buttons.png" />
+    <Content Include="Content\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Content\fancybox\fancybox_loading.gif" />
+    <Content Include="Content\fancybox\fancybox_overlay.png" />
+    <Content Include="Content\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Content\fancybox\fancybox_sprite.png" />
+    <Content Include="Content\jquery.fancybox-buttons.css" />
+    <Content Include="Content\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\jquery.fancybox.css" />
+    <Content Include="Scripts\jquery-1.6.1.js" />
+    <Content Include="Scripts\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\jquery.fancybox-media.js" />
+    <Content Include="Scripts\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2019US\fileUploader.ashx.cs">
+      <DependentUpon>fileUploader.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +280,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Functions\" />
     <Folder Include="lovevz\" />
   </ItemGroup>
   <PropertyGroup>
