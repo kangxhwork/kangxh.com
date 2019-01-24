@@ -10,26 +10,24 @@ var showImage = function (event) {
         name.value = input.files[0].name;
     };
     reader.readAsDataURL(input.files[0]);
-};function sendFile() {
+};
 
+function sendFile()
+{
     var formData = new FormData();
     formData.append('file', $('#photoFile')[0].files[0]);
-    fromData.append('trip', '2019us');
-    formData.append('location', $('#photoName'));
+    formData.append('trip', "2019us");
     $.ajax({
         type: 'post',
-        url: 'fileUploader.ashx',
+        url: '/photo.ashx',
         data: formData,
         success: function (status) {
-            //if (status != 'error') {
-            //    var my_path = "MediaUploader/" + status;
-            //    $("#photoFile").attr("src", my_path);
-            //}
+            console.log(status);
         },
         processData: false,
         contentType: false,
         error: function () {
-            alert("Whoops something went wrong!");
+            console.log(status);
         }
     });
-}
+}
