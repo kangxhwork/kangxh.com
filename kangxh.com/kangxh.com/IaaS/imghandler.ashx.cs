@@ -11,12 +11,13 @@ using System.Web.Configuration;
 
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
-namespace Sites
+
+namespace kangxh.com.IaaS
 {
     /// <summary>
-    /// Summary description for photo
+    /// Summary description for imghandler
     /// </summary>
-    public class photo : IHttpHandler
+    public class imghandler : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -24,15 +25,11 @@ namespace Sites
             Trace.TraceInformation("get request from " + context.Request.Browser);
             context.Response.ContentType = "text/plain";
 
-            //string storageConnectStr = WebConfigurationManager.ConnectionStrings["StorageAccount"].ConnectionString;
-            string storageConnectStr = "DefaultEndpointsProtocol=https;AccountName=kangxhsaseawebapp;AccountKey=f4Ivr9Ter80Ig+mrAGAnF4hxA3Vy/+lLnz+fPTh+bYfL5mH61yWXFq+4zJsnhddYc3dF3hOkasLmTB6GCOeXbQ==;EndpointSuffix=core.windows.net";
-            string photoTripName = context.Request["trip"];
-            string photoLocationTag = context.Request["location"];
-
+            string storageConnectStr = WebConfigurationManager.ConnectionStrings["StorageAccount"].ConnectionString;
+            
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(storageConnectStr);
-
             CloudBlobClient cloudBlobClient = storageAccount.CreateCloudBlobClient();
-            CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference("trip");
+            CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference("image");
             cloudBlobContainer.CreateIfNotExists();
 
             string fileGUID = Guid.NewGuid().ToString();

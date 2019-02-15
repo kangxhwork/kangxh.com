@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<!--code refer from https://codepedia.info/upload-image-using-jquery-ajax-asp-net-c-sharp/ -->
+<!-- & https://docs.microsoft.com/en-us/azure/functions/tutorial-static-website-serverless-api-with-database -->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Upload Image</title>
+    <script src="/js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <form id="uploadPhotoForm">
+        <input type="file" id="photoFile" accept="image/gif, image/jpeg, image/png" onchange="showImage(event)">
+        <input type="submit" id="UploadFile" value="Upload" onclick="sendFile()">
+    </form>
+    <br />
+
+    <img id="photoPreview" src="/html5/images/image_1.jpg" width="300" />
+
+    <script src="/js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="/js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+    <!-- Image JS -->
+    <script src="../iaas/imgupload.js"></script>
+</body>
+</html>
+
+

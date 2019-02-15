@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <!--code refer from https://codepedia.info/upload-image-using-jquery-ajax-asp-net-c-sharp/ -->
+<!-- & https://docs.microsoft.com/en-us/azure/functions/tutorial-static-website-serverless-api-with-database -->
 <html class="no-js">
 <!--<![endif]-->
 <head>
@@ -10,6 +11,18 @@
     <meta name="description" content="Travel" />
     <meta name="keywords" content="Travel - US West - 2019" />
     <meta name="author" content="" />
+
+    <style>
+        .progress_outer {
+            border: 1px solid #000;
+        }
+
+        .progress {
+            width: 20%;
+            background: #DEDEDE;
+            height: 20px;
+        }
+    </style>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
@@ -88,7 +101,7 @@
                                                     <div class="row">
                                                         <div class="col-sm-12 mt">
                                                             <div class="input-field">
-                                                                <label for="Location">Photo:</label>
+                                                                <label type="text" id="tripName">2019US</label>
                                                                 <img class="col-sm-12 mt" id="photoPreview" src="" width="300" />
                                                                 <input type="text" id="photoName" class="form-control" />
                                                             </div>
@@ -100,8 +113,8 @@
                                                             <div class="input-field">
                                                                 <label for="Location">Location:</label>
                                                                 <Select id="photoLocation" class="cs-select cs-skin-border">
-                                                                    <option value="ANY" selected>no Location Info</option>
-                                                                    <option value="Los Angeles"> Los Angeles</option>
+                                                                    <option value="ANY" selected>N/A</option>
+                                                                    <option value="Los Angeles" selected> Los Angeles</option>
                                                                     <option value="Salt Lake City">Salt Lake City</option>
                                                                     <option value="Yellow Stone">Yellow Stone</option>
                                                                     <option value="Monument Valley">Monument Valley</option>
@@ -111,7 +124,7 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-sm-12 mt">
-                                                            <input type="submit" id="UploadFile" class="btn btn-primary btn-block btn-xs" value="Upload" onclick="sendFile()" >
+                                                            <input type="submit" id="UploadFile" class="btn btn-primary btn-block btn-xs" value="Upload" onclick="sendFile()">
                                                         </div>
                                                     </div>
                                                 </form>
