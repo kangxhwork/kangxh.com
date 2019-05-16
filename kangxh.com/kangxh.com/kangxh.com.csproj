@@ -206,6 +206,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="app.html" />
+    <Content Include="base.html" />
     <Content Include="contact.html" />
     <Content Include="container.html" />
     <Content Include="container\aks-cmd.jpg" />
@@ -378,6 +379,7 @@
     <Content Include="ClassDiagram1.cd" />
     <Content Include="container\k8s.vsdm" />
     <None Include="Properties\PublishProfiles\kangxhwebsea - Web Deploy.pubxml" />
+    <Content Include="sitemaster.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -501,6 +503,13 @@
       <DependentUpon>SignOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sitemaster.Master.cs">
+      <DependentUpon>sitemaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sitemaster.Master.designer.cs">
+      <DependentUpon>sitemaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

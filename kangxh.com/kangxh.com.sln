@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "..\..\..\..\..\.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kangxhFunc", "kangxhFunc\kangxhFunc.csproj", "{4F2EBFF3-99F8-4A1D-8CEF-09F675978312}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lovevz.net", "..\..\lovevz.net\lovevz.net.csproj", "{252214D8-3B52-4312-BD70-6F04A235F4DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4F2EBFF3-99F8-4A1D-8CEF-09F675978312}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F2EBFF3-99F8-4A1D-8CEF-09F675978312}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F2EBFF3-99F8-4A1D-8CEF-09F675978312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252214D8-3B52-4312-BD70-6F04A235F4DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252214D8-3B52-4312-BD70-6F04A235F4DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252214D8-3B52-4312-BD70-6F04A235F4DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252214D8-3B52-4312-BD70-6F04A235F4DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

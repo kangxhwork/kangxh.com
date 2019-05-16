@@ -1,34 +1,75 @@
 ﻿<!DOCTYPE html>
-<!--code refer from https://codepedia.info/upload-image-using-jquery-ajax-asp-net-c-sharp/ -->
-<!-- & https://docs.microsoft.com/en-us/azure/functions/tutorial-static-website-serverless-api-with-database -->
 <html class="no-js">
-<!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Upload Image</title>
-    <script src="/js/modernizr-2.6.2.min.js"></script>
+    <title>KANGXH &mdash; Cloud technology practise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microsoft Azure Technology" />
+    <meta name="keywords" content="Microsoft, Cloud Architecture, Azure" />
+    <meta name="author" content="kang_xh@hotmail.com" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="/html5/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="/html5/css/animate.css">
+    <link rel="stylesheet" href="/html5/css/icomoon.css">
+    <link rel="stylesheet" href="/html5/css/bootstrap.css">
+    <link rel="stylesheet" href="/html5/css/flexslider.css">
+    <link rel="stylesheet" href="/html5/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/html5/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/html5/css/style.css">
+
+    <script src="html5/js/modernizr-2.6.2.min.js"></script>
 </head>
-
 <body>
-    <form id="uploadPhotoForm">
-        <input type="file" id="photoFile" accept="image/gif, image/jpeg, image/png" onchange="showImage(event)">
-        <input type="submit" id="UploadFile" value="Upload" onclick="sendFile()">
-    </form>
-    <br />
+    <div id="fh5co-page">
+        <header id="fh5co-header" role="banner">
+            <div class="container">
+                <div class="header-inner">
+                    <h1><a href="/index.html">KangXH</a></h1>
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="/identity.html">Identity</a></li>
+                            <li><a href="/iaas.html">IaaS</a></li>
+                            <li><a href="/container.html">Container</a></li>
+                            <li><a href="/microservice.html">Micrsoservice</a></li>
+                            <li><a href="/app.html">App Service</a></li>
+                            <li><a href="/iot.html">Internet of Thing</a></li>
+                            <li><a href="/contact.html">Contact</a></li>
+                            <li class="cta"><a href="https://docs.microsoft.com/en-us/azure/architecture/">Microsoft Azure</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-    <img id="photoPreview" src="/html5/images/image_1.jpg" width="300" />
+        <form id="uploadPhotoForm">
+            <input type="file" class="btn-lg" id="photoFile" accept="image/gif, image/jpeg, image/png" onchange="showImage(event)">
+            <br />
+            <img id="photoPreview" src="/html5/images/image_1.jpg" width="300" />
+            <p></p>
+            <input type="submit" class="btn-lg" id="UploadFile" value="Upload" onclick="sendFile()">
+        </form>
+    </div>
+
+    <!-- jQuery -->
+    <script src="html5/js/jquery.min.js"></script>
+    <script src="html5/js/jquery.easing.1.3.js"></script>
+    <script src="html5/js/bootstrap.min.js"></script>
+    <script src="html5/js/jquery.waypoints.min.js"></script>
+    <script src="html5/js/owl.carousel.min.js"></script>
+    <script src="html5/js/jquery.flexslider-min.js"></script>
+    <script src="html5/js/main.js"></script>
 
     <script src="/js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
     <script src="/js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
     <script src="/js/bootstrap.min.js"></script>
-    <!-- Main JS -->
     <script src="/js/main.js"></script>
-    <!-- Image JS -->
     <script src="../iaas/imgupload.js"></script>
+
 </body>
 </html>
-
 
